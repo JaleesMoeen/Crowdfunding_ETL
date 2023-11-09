@@ -1,0 +1,2 @@
+# Crowdfunding_ETL
+ Builded an ETL pipeline using Python, Pandas, Python dictionary methods and regular expressions to extract and transform the data. Created four CSV files and use the CSV file data to create an ERD and a table schema. Finally, uploaded the CSV file data into a Postgres database. It involves extracting data from multiple sources, cleaning and transforming the data using Jupyter Notebook with pandas, numpy, and datetime packages, and loading the cleaned data into a relational database using pgAdmin.    
