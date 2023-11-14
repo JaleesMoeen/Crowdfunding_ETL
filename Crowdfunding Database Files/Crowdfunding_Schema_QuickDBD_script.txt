@@ -1,0 +1,41 @@
+
+
+contacts 
+-
+contact_id  int PK
+first_name  varchar(50)
+last_name   varchar(50)
+email   varchar(50)  
+
+
+category
+-
+category_id  varchar(4) Pk
+category    varchar(20)
+
+
+subcategory
+-
+subcategory_id  varchar(8) PK
+sabcategory  varchar(20) 
+
+
+
+campaign
+-
+cf_id  int PK
+contact_id int fk >- contacts.contact_id 
+company_name  varchar(50)	
+description varchar(100)
+goal  float
+pledged float
+outcome varchar(30)
+backers_count int	
+country varchar(20)
+currency varchar(20)	
+launch_date date
+end_date date
+category_id  varchar(4)  fk >- category.category_id
+subcategory_id  varchar(8) fk >- subcategory.subcategory_id
+
+
