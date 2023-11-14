@@ -232,7 +232,7 @@ Export the 'new_regex_contact_info' DataFrame as regex_contacts.csv
 ![Alt text](Images/notebook_screens/27_export_regex_df.png)
 
 
-## Author
+## Authors
 
 ## [Jalees Moeen GitHub](https://github.com/JaleesMoeen)
 
