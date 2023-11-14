@@ -149,6 +149,91 @@ Confirm the number of columns after dropping in the DataFrame and then export th
 ![Alt text](Images/notebook_screens/15_export_campaign_df.png)
 
 
+### 1.5 Create the Contacts DataFrame ( Using Python Dictionaries)
+
+
+![Alt text](Images/6_contacts.jpeg)
+
+
+Extracting and transforming the data from the 'contacts.xlsx' excel data.
+
+
+![Alt text](Images/notebook_screens/16_contacts_info_df.png)
+
+
+Iterate through the 'contact_info_df' DataFrame to get the data values of all rows in a list.
+
+
+![Alt text](Images/notebook_screens/17_list_comprehension.png)
+
+
+Create a 'new_contact_info_df' DataFrame for contacts data.
+
+
+![Alt text](Images/notebook_screens/18_news_contacts_df.png)
+
+
+Split each "name" column value into a first and last name, and place each in a new column.
+
+
+![Alt text](Images/notebook_screens/19_split_columns.png)
+
+
+Reorder the columns and Display the new DataFrame i.e. 'new_contact_info_df' with first ten rows.
+
+
+![Alt text](Images/notebook_screens/20_new_contact_info_df.png)
+
+
+Export the 'new_contact_info_df' DataFrame as contacts.csv.
+
+
+![Alt text](Images/notebook_screens/21_export_contacts_df.png)
 
 
 
+### 1.6 Create the Contacts DataFrame ( Using Regular Expression)
+
+
+![Alt text](Images/notebook_screens/22_regex.png)
+
+
+Extracting and transforming the data from the 'contacts.xlsx' excel data into 'regex_contact_info_df' DataFrame.
+
+
+Extract the four-digit contact ID number. Extract the "contact_id", "name", and "email" columns by using regular expressions.
+
+
+![Alt text](Images/notebook_screens/23_extract_id.png)
+
+
+
+![Alt text](Images/notebook_screens/24_extract_name.png)
+
+
+
+![Alt text](Images/notebook_screens/25_extract_email.png)
+
+
+
+Create a new copy of the 'regex_contact_info_df' with the 'contact_id', 'name', 'email' columns.
+
+Split each "name" column value into a first and a last name, and place each in a new column.
+
+Display the created 'new_regex_contact_info' DataFrame with first ten rows.
+
+
+![Alt text](Images/notebook_screens/26_regex_df.png)
+
+
+Export the 'new_regex_contact_info' DataFrame as regex_contacts.csv
+
+
+![Alt text](Images/notebook_screens/27_export_regex_df.png)
+
+
+## Author
+
+## [Jalees Moeen GitHub](https://github.com/JaleesMoeen)
+
+## [Maira Syed GitHub](https://github.com/mairasyed)
