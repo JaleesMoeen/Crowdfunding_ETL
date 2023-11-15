@@ -61,25 +61,13 @@ We get the data resources from two files 'crowdfundig.xlsx' and 'contacts.xlsx' 
 
 Extract and transform the crowdfunding.xlsx data to create a 'crowdfunding_info_df' DataFrame.
 
-
-![Alt text](Images/notebook_screens/3_extract_crowdfunding.png)
-
-
 Check the columns names to confirms before splitting the values.
-
 
 Split each "category & sub-category" column value into "category" and "subcategory"
 
-
 Review to check the names and confirm how much categories and subcategories exists.
 
-
-
 To create the category and subcategory identification numbers, use a list comprehension to add the "cat" string or the "subcat" string to each number in the category or the subcategory array, respectively.
-
-
-
-
 
 Create the category DataFrame as 'category_df' and subcatgeory DataFrame as 'subcategory_df'.
 
