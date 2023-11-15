@@ -241,9 +241,6 @@ Show the results of 'campaign' table for the first 10 rows.
 ![Alt text](Images/DB_screens/6_campaign_table.png)
 
 
-
-
-
 ## Authors
 
 ## [Jalees Moeen GitHub](https://github.com/JaleesMoeen)
