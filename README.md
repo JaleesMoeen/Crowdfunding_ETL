@@ -61,11 +61,8 @@ We get the data resources from two files 'crowdfundig.xlsx' and 'contacts.xlsx' 
 
 Extract and transform the crowdfunding.xlsx data to create a 'crowdfunding_info_df' DataFrame.
 
-Check the columns names to confirms before splitting the values.
+Split each "category & sub-category" column value into "category" and "subcategory".
 
-Split each "category & sub-category" column value into "category" and "subcategory"
-
-Review to check the names and confirm how much categories and subcategories exists.
 
 To create the category and subcategory identification numbers, use a list comprehension to add the "cat" string or the "subcat" string to each number in the category or the subcategory array, respectively.
 
@@ -85,9 +82,6 @@ Show the 'subcategory_df' DataFrame with top five rows.
 
 
 
-Export the category DataFrame as category.csv and the subcategory DataFrame as subcategory.csv.
-
-
 
 ### 1.4 Create the Campaign DataFrame
 
@@ -98,22 +92,12 @@ Export the category DataFrame as category.csv and the subcategory DataFrame as s
 Create a copy of the 'crowdfunding_info_df' to transform the crowdfunding.xlsx data.
 
 
-
-
-
 Rename the specific columns and sets their appropriate data types for 'campaign_df' DataFrame. 
 
 Convert the 'launched_date' and 'end_date' columns to UTC datetime format.
 
 
-
-
-
 Drop the unwanted columns for campaign DataFrame.
-
-
-
-
 
 Confirm the number of columns after dropping in the DataFrame and then export the campaign DataFrame as campaign.csv.
 
@@ -128,26 +112,16 @@ Confirm the number of columns after dropping in the DataFrame and then export th
 
 Extracting and transforming the data from the 'contacts.xlsx' excel data.
 
-
-
-
 Iterate through the 'contact_info_df' DataFrame to get the data values of all rows in a list.
-
-
 
 Create a 'new_contact_info_df' DataFrame for contacts data.
 
-
 Split each "name" column value into a first and last name, and place each in a new column.
-
 
 Reorder the columns and Display the new DataFrame i.e. 'new_contact_info_df' with first ten rows.
 
 
 ![Alt text](Images/notebook_screens/20_new_contact_info_df.png)
-
-
-Export the 'new_contact_info_df' DataFrame as contacts.csv.
 
 
 
@@ -159,12 +133,7 @@ Export the 'new_contact_info_df' DataFrame as contacts.csv.
 
 Extracting and transforming the data from the 'contacts.xlsx' excel data into 'regex_contact_info_df' DataFrame.
 
-
 Extract the four-digit contact ID number. Extract the "contact_id", "name", and "email" columns by using regular expressions.
-
-
-
-Create a new copy of the 'regex_contact_info_df' with the 'contact_id', 'name', 'email' columns.
 
 Split each "name" column value into a first and a last name, and place each in a new column.
 
@@ -172,10 +141,6 @@ Display the created 'new_regex_contact_info' DataFrame with first ten rows.
 
 
 ![Alt text](Images/notebook_screens/26_regex_df.png)
-
-
-Export the 'new_regex_contact_info' DataFrame as regex_contacts.csv
-
 
 
 
