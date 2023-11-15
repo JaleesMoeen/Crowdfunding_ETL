@@ -232,6 +232,102 @@ Export the 'new_regex_contact_info' DataFrame as regex_contacts.csv
 ![Alt text](Images/notebook_screens/27_export_regex_df.png)
 
 
+
+
+
+# Deliverable 2: Load the Data to Postgres Database
+
+
+![Alt text](Images/DB_screens/postgresql.png)
+
+
+
+### 2.1  Prerequisites
+
+- PostgreSQL database
+- pgAdmin
+
+
+### 2.2 Data Modeling
+
+
+Inspect the four CSV files, and then sketch an Entity Relationship Diagram of the tables. 
+
+To create the sketch, we use a QuickDBD as one of best tool for design ERD.
+
+Here is how the database model prepared.
+
+
+![Alt text](Images/DB_screens/Crowdfunding_ERD.png)
+
+
+
+
+### 2.3 Data Engineering
+
+#### Create the Database and Table Schema
+
+Create the 'crowdfunding_db' database in pgAdmin using SQL.
+
+
+![Alt text](Images/DB_screens/1_create_db.png)
+
+
+Create a table schema for each of the four CSV files. 
+
+Specify the data types, primary keys, foreign keys, and other constraints.
+
+Create the tables in the correct order to handle the foreign keys.
+
+
+#### Import Data Files 
+
+we can see how successfully the process for all four files completed.
+
+
+![Alt text](<Images/DB_screens/2_Import Files.png>)
+
+
+
+
+#### Tables Data
+
+Initially, we wrote the below 'select' queries in order to fetch the data from their respective tables. 
+
+
+![Alt text](Images/DB_screens/queries.png)
+
+
+
+Tables data at a glance: 
+
+Display the results of 'contacts' table for the first 10 rows.
+
+
+![Alt text](Images/DB_screens/3_contacts_table.png)
+
+
+Exhibit the results of 'category' table for the first 10 rows.
+
+
+![Alt text](Images/DB_screens/4_category_table.png)
+
+
+List the results of 'subcategory' table for the first 10 rows.
+
+
+![Alt text](Images/DB_screens/5_subcategory_table.png)
+
+
+Show the results of 'campaign' table for the first 10 rows.
+
+
+![Alt text](Images/DB_screens/6_campaign_table.png)
+
+
+
+
+
 ## Authors
 
 ## [Jalees Moeen GitHub](https://github.com/JaleesMoeen)
