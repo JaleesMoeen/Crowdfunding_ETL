@@ -45,7 +45,7 @@ Before you begin, ensure you have the following installed:
 - Pandas (for data analysis)
 
 
-![Alt text](Images/notebook_screens/1_libraries.png)
+
 
 
 ### 1.2 Data Sources
@@ -68,33 +68,20 @@ Extract and transform the crowdfunding.xlsx data to create a 'crowdfunding_info_
 Check the columns names to confirms before splitting the values.
 
 
-![Alt text](Images/notebook_screens/4_crowdfunding_column_names.png)
-
-
 Split each "category & sub-category" column value into "category" and "subcategory"
 
 
-![Alt text](Images/notebook_screens/5_split_columns.png)
-
-
 Review to check the names and confirm how much categories and subcategories exists.
-
-
-![Alt text](Images/notebook_screens/6_categories_subcategories.png)
 
 
 
 To create the category and subcategory identification numbers, use a list comprehension to add the "cat" string or the "subcat" string to each number in the category or the subcategory array, respectively.
 
 
-![Alt text](Images/notebook_screens/7_list_comprehensions.png)
 
 
 
 Create the category DataFrame as 'category_df' and subcatgeory DataFrame as 'subcategory_df'.
-
-
-![Alt text](Images/notebook_screens/8_dfs.png)
 
 
 Show the 'category_df' DataFrame with top five rows.
@@ -113,9 +100,6 @@ Show the 'subcategory_df' DataFrame with top five rows.
 Export the category DataFrame as category.csv and the subcategory DataFrame as subcategory.csv.
 
 
-![Alt text](Images/notebook_screens/11_export_dfs.png)
-
-
 
 ### 1.4 Create the Campaign DataFrame
 
@@ -126,7 +110,7 @@ Export the category DataFrame as category.csv and the subcategory DataFrame as s
 Create a copy of the 'crowdfunding_info_df' to transform the crowdfunding.xlsx data.
 
 
-![Alt text](Images/notebook_screens/12_campaign_df.png)
+
 
 
 Rename the specific columns and sets their appropriate data types for 'campaign_df' DataFrame. 
@@ -134,19 +118,18 @@ Rename the specific columns and sets their appropriate data types for 'campaign_
 Convert the 'launched_date' and 'end_date' columns to UTC datetime format.
 
 
-![Alt text](Images/notebook_screens/13_datatime.png)
+
 
 
 Drop the unwanted columns for campaign DataFrame.
 
 
-![Alt text](Images/notebook_screens/14_drop_columns.png)
+
 
 
 Confirm the number of columns after dropping in the DataFrame and then export the campaign DataFrame as campaign.csv.
 
 
-![Alt text](Images/notebook_screens/15_export_campaign_df.png)
 
 
 ### 1.5 Create the Contacts DataFrame ( Using Python Dictionaries)
@@ -158,25 +141,16 @@ Confirm the number of columns after dropping in the DataFrame and then export th
 Extracting and transforming the data from the 'contacts.xlsx' excel data.
 
 
-![Alt text](Images/notebook_screens/16_contacts_info_df.png)
 
 
 Iterate through the 'contact_info_df' DataFrame to get the data values of all rows in a list.
 
 
-![Alt text](Images/notebook_screens/17_list_comprehension.png)
-
 
 Create a 'new_contact_info_df' DataFrame for contacts data.
 
 
-![Alt text](Images/notebook_screens/18_news_contacts_df.png)
-
-
 Split each "name" column value into a first and last name, and place each in a new column.
-
-
-![Alt text](Images/notebook_screens/19_split_columns.png)
 
 
 Reorder the columns and Display the new DataFrame i.e. 'new_contact_info_df' with first ten rows.
@@ -186,9 +160,6 @@ Reorder the columns and Display the new DataFrame i.e. 'new_contact_info_df' wit
 
 
 Export the 'new_contact_info_df' DataFrame as contacts.csv.
-
-
-![Alt text](Images/notebook_screens/21_export_contacts_df.png)
 
 
 
@@ -204,17 +175,6 @@ Extracting and transforming the data from the 'contacts.xlsx' excel data into 'r
 Extract the four-digit contact ID number. Extract the "contact_id", "name", and "email" columns by using regular expressions.
 
 
-![Alt text](Images/notebook_screens/23_extract_id.png)
-
-
-
-![Alt text](Images/notebook_screens/24_extract_name.png)
-
-
-
-![Alt text](Images/notebook_screens/25_extract_email.png)
-
-
 
 Create a new copy of the 'regex_contact_info_df' with the 'contact_id', 'name', 'email' columns.
 
@@ -227,10 +187,6 @@ Display the created 'new_regex_contact_info' DataFrame with first ten rows.
 
 
 Export the 'new_regex_contact_info' DataFrame as regex_contacts.csv
-
-
-![Alt text](Images/notebook_screens/27_export_regex_df.png)
-
 
 
 
@@ -260,6 +216,13 @@ Here is how the database model prepared.
 
 ![Alt text](Images/DB_screens/Crowdfunding_ERD.png)
 
+
+During the inspection of the data files, we discovered some dependencies between the tables with repect to the columns of data.
+
+We set the 'contact_id' as primary key for 'contacts' table, however in the 'campaign' table this acts as a foreign key as the 'campaing' data is dependent to 'contacts' data. Considering this dependency, we set many to one relationship between them.
+
+
+Likewise, the 'campaign' table is dependent on the category and subcategory table with 'category_id' and  'subcategory_id' as foreign keys. Considering the unique values the same fields are primary keys in  the 'category' and 'subcategory' table.
 
 
 
